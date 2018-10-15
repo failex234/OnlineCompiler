@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Material Design for Bootstrap fonts and icons -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+	<!-- Material Design for Bootstrap CSS -->
+	<link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+	 integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+	<!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js" integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+	 crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js" integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+	 crossorigin="anonymous"></script>
+	<script>$(document).ready(function () { $('body').bootstrapMaterialDesign(); });</script>
+
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+	 crossorigin="anonymous">
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<script src="js/main.js"></script>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+	<title>Hello, world!</title>
+</head>
+
+<body onload="onload();">
+	<div class="jumbotron">
+		<div id="formcontainer" class="d-flex justify-content-center">
+			<form action="upload.php" method="POST">
+				<h1 class="display-4">Online Compiler</h1>
+				<br>
+
+				<div class="form-group">
+					<label for="sourcefile">Source file (only one) (.c .cpp .cc)</label>
+					<input type="file" class="form-control-file" id="sourcefile" name="sourcefile">
+				</div>
+
+				<hr class="my-4">
+
+				<div class="form-group">
+					<label for="authpass">Password</label>
+					<input type="password" class="form-control" id="authpass" placeholder="Password" name="password">
+				</div>
+
+				<div class="g-recaptcha" data-sitekey="6LfSEnUUAAAAAOixEtp5OuAUd6T75teKUJtP6JHy"></div>
+				<button type="button" class="btn btn-danger disabled" id="submitbtn">Submit</button>
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
